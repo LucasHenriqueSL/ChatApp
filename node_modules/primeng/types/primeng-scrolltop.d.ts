@@ -1,0 +1,159 @@
+import { ScrollTopPassThrough, ScrollTopIconTemplateContext } from 'primeng/types/scrolltop';
+export * from 'primeng/types/scrolltop';
+import * as i0 from '@angular/core';
+import { TemplateRef, QueryList } from '@angular/core';
+import { MotionOptions, MotionEvent } from '@primeuix/motion';
+import * as i2 from 'primeng/api';
+import { PrimeTemplate } from 'primeng/api';
+import { BaseComponent } from 'primeng/basecomponent';
+import * as i1 from 'primeng/bind';
+import { Bind } from 'primeng/bind';
+import { ButtonProps } from 'primeng/button';
+import * as _primeuix_styled from '@primeuix/styled';
+import { BaseStyle } from 'primeng/base';
+
+/**
+ *
+ * ScrollTop gets displayed after a certain scroll position and used to navigates to the top of the page quickly.
+ *
+ * [Live Demo](https://www.primeng.org/scrolltop/)
+ *
+ * @module scrolltopstyle
+ *
+ */
+declare enum ScrollTopClasses {
+    /**
+     * Class name of the root element
+     */
+    root = "p-scrolltop",
+    /**
+     * Class name of the icon element
+     */
+    icon = "p-scrolltop-icon"
+}
+declare class ScrollTopStyle extends BaseStyle {
+    name: string;
+    style: _primeuix_styled.StyleType;
+    classes: {
+        root: ({ instance }: {
+            instance: any;
+        }) => (string | {
+            'p-scrolltop-sticky': boolean;
+        })[];
+        icon: string;
+    };
+    static ɵfac: i0.ɵɵFactoryDeclaration<ScrollTopStyle, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<ScrollTopStyle>;
+}
+interface ScrollTopStyle extends BaseStyle {
+}
+
+/**
+ * ScrollTop gets displayed after a certain scroll position and used to navigates to the top of the page quickly.
+ * @group Components
+ */
+declare class ScrollTop extends BaseComponent<ScrollTopPassThrough> {
+    componentName: string;
+    $pcScrollTop: ScrollTop | undefined;
+    bindDirectiveInstance: Bind;
+    onAfterViewChecked(): void;
+    /**
+     * Class of the element.
+     * @group Props
+     */
+    styleClass: string | undefined;
+    /**
+     * Inline style of the element.
+     * @group Props
+     */
+    style: {
+        [klass: string]: any;
+    } | null | undefined;
+    /**
+     * Target of the ScrollTop.
+     * @group Props
+     */
+    target: 'window' | 'parent' | undefined;
+    /**
+     * Defines the threshold value of the vertical scroll position of the target to toggle the visibility.
+     * @group Props
+     */
+    threshold: number;
+    /**
+     * Name of the icon or JSX.Element for icon.
+     * @group Props
+     */
+    get icon(): string | undefined;
+    /**
+     * Defines the scrolling behavior, "smooth" adds an animation and "auto" scrolls with a jump.
+     * @group Props
+     */
+    behavior: 'auto' | 'smooth' | undefined;
+    /**
+     * A string value used to determine the display transition options.
+     * @group Props
+     * @deprecated since v21.0.0. Use `motionOptions` instead.
+     */
+    showTransitionOptions: string;
+    /**
+     * A string value used to determine the hiding transition options.
+     * @group Props
+     * @deprecated since v21.0.0. Use `motionOptions` instead.
+     */
+    hideTransitionOptions: string;
+    /**
+     * The motion options.
+     * @group Props
+     */
+    motionOptions: i0.InputSignal<MotionOptions | undefined>;
+    computedMotionOptions: i0.Signal<MotionOptions>;
+    /**
+     * Establishes a string value that labels the scroll-top button.
+     * @group Props
+     */
+    buttonAriaLabel: string | undefined;
+    /**
+     * Used to pass all properties of the ButtonProps to the Button component.
+     * @group Props
+     */
+    buttonProps: ButtonProps;
+    /**
+     * Custom icon template.
+     * @param {ScrollTopIconTemplateContext} context - icon context.
+     * @see {@link ScrollTopIconTemplateContext}
+     * @group Templates
+     */
+    iconTemplate: TemplateRef<ScrollTopIconTemplateContext> | undefined;
+    templates: QueryList<PrimeTemplate> | undefined;
+    _iconTemplate: TemplateRef<ScrollTopIconTemplateContext> | undefined;
+    _icon: string | undefined;
+    set icon(value: string | undefined);
+    documentScrollListener: VoidFunction | null | undefined;
+    parentScrollListener: VoidFunction | null | undefined;
+    visible: i0.WritableSignal<boolean>;
+    render: i0.WritableSignal<boolean>;
+    overlay: any;
+    _componentStyle: ScrollTopStyle;
+    onInit(): void;
+    onAfterContentInit(): void;
+    onClick(): void;
+    onBeforeEnter(event: MotionEvent): void;
+    onBeforeLeave(): void;
+    onAfterLeave(): void;
+    checkVisibility(scrollY: number): void;
+    bindParentScrollListener(): void;
+    bindDocumentScrollListener(): void;
+    unbindParentScrollListener(): void;
+    unbindDocumentScrollListener(): void;
+    onDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ScrollTop, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ScrollTop, "p-scrollTop, p-scrolltop, p-scroll-top", never, { "styleClass": { "alias": "styleClass"; "required": false; }; "style": { "alias": "style"; "required": false; }; "target": { "alias": "target"; "required": false; }; "threshold": { "alias": "threshold"; "required": false; }; "icon": { "alias": "icon"; "required": false; }; "behavior": { "alias": "behavior"; "required": false; }; "showTransitionOptions": { "alias": "showTransitionOptions"; "required": false; }; "hideTransitionOptions": { "alias": "hideTransitionOptions"; "required": false; }; "motionOptions": { "alias": "motionOptions"; "required": false; "isSignal": true; }; "buttonAriaLabel": { "alias": "buttonAriaLabel"; "required": false; }; "buttonProps": { "alias": "buttonProps"; "required": false; }; }, {}, ["iconTemplate", "templates"], never, true, [{ directive: typeof i1.Bind; inputs: {}; outputs: {}; }]>;
+    static ngAcceptInputType_threshold: unknown;
+}
+declare class ScrollTopModule {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ScrollTopModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ScrollTopModule, never, [typeof ScrollTop, typeof i2.SharedModule], [typeof ScrollTop, typeof i2.SharedModule]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<ScrollTopModule>;
+}
+
+export { ScrollTop, ScrollTopClasses, ScrollTopModule, ScrollTopStyle };
