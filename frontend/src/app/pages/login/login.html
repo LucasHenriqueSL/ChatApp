@@ -1,6 +1,5 @@
 <div class="login-container">
   <div class="login-card">
-
     <div class="login-header">
       <i class="pi pi-comments"></i>
       <h1>ChatApp</h1>
@@ -10,18 +9,18 @@
     <div class="login-form">
       <div class="field">
         <label for="email">E-mail</label>
-        <p-iconfield>
-          <p-inputicon styleClass="pi pi-envelope" />
-          <input pInputText id="email" placeholder="seu@email.com" />
-        </p-iconfield>
+        <div class="input-wrapper">
+          <i class="pi pi-envelope input-icon"></i>
+          <input pInputText id="email" placeholder="seu@email.com" required />
+        </div>
       </div>
 
       <div class="field">
         <label for="senha">Senha</label>
-        <p-iconfield>
-          <p-inputicon styleClass="pi pi-lock" />
-          <input pInputText id="senha" type="password" placeholder="••••••••" />
-        </p-iconfield>
+        <div class="input-wrapper">
+          <i class="pi pi-lock input-icon"></i>
+          <input pInputText id="senha" type="password" placeholder="••••••••" required />
+        </div>
         <a class="forgot">Esqueci minha senha</a>
       </div>
 
@@ -31,11 +30,9 @@
         <span>ou continue com</span>
       </p-divider>
 
+      <p-button label="Google" styleClass="w-full p-button-outlined" icon="pi pi-google" />
     </div>
 
-    <p class="register-link">
-      Não tem conta? <a>Cadastre-se</a>
-    </p>
-
+    <p class="register-link">Não tem conta? <a onclick="navegarTelaCadastro()">Cadastre-se</a></p>
   </div>
 </div>
