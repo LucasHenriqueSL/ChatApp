@@ -1,0 +1,38 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <i class="pi pi-comments"></i>
+      <h1>ChatApp</h1>
+      <p>Entre pra continuar conversando</p>
+    </div>
+
+    <div class="login-form">
+      <div class="field">
+        <label for="email">E-mail</label>
+        <div class="input-wrapper">
+          <i class="pi pi-envelope input-icon"></i>
+          <input pInputText id="email" placeholder="seu@email.com" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-wrapper">
+          <i class="pi pi-lock input-icon"></i>
+          <input pInputText id="senha" type="password" placeholder="••••••••" required />
+        </div>
+        <a class="forgot">Esqueci minha senha</a>
+      </div>
+
+      <p-button label="Entrar" styleClass="w-full" />
+
+      <p-divider align="center">
+        <span>ou continue com</span>
+      </p-divider>
+
+      <p-button label="Google" styleClass="w-full p-button-outlined" icon="pi pi-google" />
+    </div>
+
+    <p class="register-link">Não tem conta? <a onclick="navegarTelaCadastro()">Cadastre-se</a></p>
+  </div>
+</div>
