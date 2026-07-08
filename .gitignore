@@ -141,3 +141,13 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+# Arquivos sensíveis
+**/appsettings.json
+**/appsettings.Development.json
